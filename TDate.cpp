@@ -23,6 +23,7 @@ TDate::TDate(){
 	month = now->tm_mon+1;
 	day = now->tm_mday;
 }
+
 TDate::TDate(int day, int month, int year){
 	this->year=year;
 	this->month=month;

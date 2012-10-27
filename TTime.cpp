@@ -8,6 +8,8 @@
 #include "TTime.h"
 #include <time.h>
 
+using namespace std;
+
 TTime::TTime() {
 	time_t Zeitstempel;
 	tm *now;

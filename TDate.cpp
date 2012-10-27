@@ -4,16 +4,13 @@
 //  Created on:      11-Okt-2012 21:16:58
 //  Original author: Runge
 ///////////////////////////////////////////////////////////
-
-#include "TDate.h"
-
 #include <time.h>
 #include <stdio.h>
 
+#include "TDate.h"
 
-TDate::~TDate(){
+using namespace std;
 
-}
 TDate::TDate(){
 	time_t Zeitstempel;
 	tm *now;
@@ -24,6 +21,9 @@ TDate::TDate(){
 	day = now->tm_mday;
 }
 
+TDate::~TDate(){
+}
+
 TDate::TDate(int day, int month, int year){
 	this->year=year;
 	this->month=month;
@@ -32,7 +32,6 @@ TDate::TDate(int day, int month, int year){
 
 
 void TDate::print(){
-
 	printf("%02d.%02d.%04d", day, month, year);
 }
 

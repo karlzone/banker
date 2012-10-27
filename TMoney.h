@@ -8,24 +8,27 @@
 #ifndef TMONEY_H_
 #define TMONEY_H_
 
-using namespace std;
 
 #include <stdio.h>
 #include <string>
 
+using namespace std;
 
 class TMoney {
 private:
 	double amount;
 	string currency;
+
 public:
 	TMoney();
 	virtual ~TMoney();
+	TMoney(double);
 
-	void setAmount();
+	void setAmount(double x);
 	double getAmount();
-	void setCurrency();
+	void setCurrency(string cur);
 	string getCurrency();
+	void print();
 };
 
 #endif /* TMONEY_H_ */

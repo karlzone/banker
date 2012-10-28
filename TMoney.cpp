@@ -6,6 +6,7 @@
  */
 
 #include <iostream>
+#include <ios>
 
 #include "TMoney.h"
 
@@ -43,7 +44,14 @@ string TMoney::getCurrency() {
 }
 
 void TMoney::print() {
-	//TODO cout.Precision(2) and fixed flag for amount values
-	cout << amount << currency;
+	//long oldCout;
+	//long newCout = (ios::dec | ios::fixed);	//decimal and fixed
+	//oldCout = cout.flags();
+	//cout.flags(newCout);
 
+	cout.precision(2);
+	cout << fixed << amount << currency;
+	cout.flush();
+
+	//cout.flags(oldCout);
 }

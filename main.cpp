@@ -35,6 +35,7 @@ cout << "Konto 2; " << endl; Konto2.print(); cout << endl << endl;
 
 cout << endl << endl << endl;
 cout << "...press return key to close the program..." << endl;
+//hallo blabla
 
 cin.get(ch[1]);
 

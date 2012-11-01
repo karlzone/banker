@@ -7,7 +7,7 @@
 #include <iostream>
 #include <string.h>
 
-#include "TCustomer.h"
+//#include "TCustomer.h"
 #include "TAccount.h"
 
 using namespace std;
@@ -57,12 +57,17 @@ int TAccount::getSumOfBookings() {
 	return sumOfBookings;
 }
 
-/*TODO void TAccount::setSumOfBookings(int sumOfBookings) {
+void TAccount::setSumOfBookings(int sumOfBookings) {
 	this->sumOfBookings = sumOfBookings;
-}*/
+}
 
-void print() {
-	cout << "Account number:" << endl;
-	cout << "Bookings: " << endl;
-	cout << "Balance: " << "0.00 EUR" << endl;
+void TAccount::print() {
+	cout << "Account number:  " << accountNr << endl;
+	cout << "Bookings:        " << sumOfBookings << endl;
+	cout << "Balance:         " << "0.00 EUR" << endl;
+}
+
+void TAccount::printAccountNr() {
+	cout << accountNr;
+	cout.flush();
 }

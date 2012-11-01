@@ -13,10 +13,12 @@
 
 using namespace std;
 
-TCustomer::TCustomer() {
+#define MAXACCOUNTS = 10
+
+/*TCustomer::TCustomer() {
 	// TODO Auto-generated constructor stub
 
-}
+}*/
 
 TCustomer::~TCustomer() {
 	// TODO Auto-generated destructor stub
@@ -29,7 +31,8 @@ TCustomer::TCustomer(string name, TDate birthday, string street, string streetnr
 	this->postcode = postcode;
 	this->city = city;
 	this->birthday = birthday;
-	this->sumOfTAccounts = 0;
+	this->sumOfTAccounts = 10;
+	accountPtr[0] = getAccountPtr();
 }
 
 TDate TCustomer::getBirthday() {
@@ -104,9 +107,11 @@ void TCustomer::print() {
 	birthday.print();
 	cout << endl;
 	cout << "Accounts:" << endl;
-	for (int i = 0; i < 1; i++) {
-		cout << "-  Account number: ";
-		cout << accountPtr[0]->getAccountNr() << endl;
+	for (int i = 0; i < sumOfTAccounts; i++) {
+		cout << "-  Account number:   " ;
+		cout << i << endl;
+		//cout << accountPtr[i]->getAccountNr() << endl;
+		//accountPtr[i] ->printAccountNr();
 	}
 
 }

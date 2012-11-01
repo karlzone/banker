@@ -8,7 +8,7 @@
 #ifndef TACCOUNT_H_
 #define TACCOUNT_H_
 
-#include "TCustomer.h"
+//#include "TCustomer.h"
 
 using namespace std;
 
@@ -33,9 +33,9 @@ public:
 	string getPin();
 	void setPin(string pin);
 	int getSumOfBookings();
-	//void setSumOfBookings(int sumOfBookings);
-
+	void setSumOfBookings(int sumOfBookings);
 	void print();
+	void printAccountNr();
 };
 
 #endif /* TACCOUNT_H_ */

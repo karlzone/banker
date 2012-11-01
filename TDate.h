@@ -8,8 +8,7 @@
 #ifndef TDATE_H_
 #define TDATE_H_
 
-class TDate
-{
+class TDate {
 private:
 	int day;
 	int month;

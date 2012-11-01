@@ -15,7 +15,7 @@ using namespace std;
 TMoney::TMoney() {
 	// TODO Auto-generated constructor stub
 	this->amount = 0;
-	this->currency = "EURO";
+	this->currency = "EUR";
 }
 
 TMoney::~TMoney() {
@@ -24,7 +24,7 @@ TMoney::~TMoney() {
 
 TMoney::TMoney(double x) {
 	this->amount = x;
-	this->currency = "EURO";
+	this->currency = "EUR";
 }
 
 void TMoney::setAmount(double x) {

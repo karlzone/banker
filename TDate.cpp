@@ -4,6 +4,7 @@
 //  Created on:      11-Okt-2012 21:16:58
 //  Original author: Runge
 ///////////////////////////////////////////////////////////
+#include <iostream>
 #include <time.h>
 #include <stdio.h>
 
@@ -32,7 +33,16 @@ TDate::TDate(int day, int month, int year){
 
 
 void TDate::print(){
-	printf("%02d.%02d.%04d", day, month, year);
+	//printf("%02d.%02d.%04d", day, month, year);
+	char oldFill = cout.fill();
+	cout.fill('0');
+
+	cout.width(2); cout << day  << ".";
+	cout.width(2); cout << month << "." ;
+	cout.width(4); cout << year;
+
+	cout.fill(oldFill);
+	cout.flush();
 }
 
 int TDate::getDay() const {

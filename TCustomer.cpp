@@ -6,8 +6,9 @@
  */
 
 #include <iostream>
-#include <stdio.h>
+#include <string>
 
+#include "TAccount.h"
 #include "TCustomer.h"
 
 using namespace std;
@@ -28,6 +29,7 @@ TCustomer::TCustomer(string name, TDate birthday, string street, string streetnr
 	this->postcode = postcode;
 	this->city = city;
 	this->birthday = birthday;
+	this->sumOfTAccounts = 0;
 }
 
 TDate TCustomer::getBirthday() {
@@ -78,13 +80,35 @@ void TCustomer::setStreetnr(string streetnr) {
 	this->streetnr = streetnr;
 }
 
+TAccount* TCustomer::getAccountPtr(){
+	return accountPtr[0];
+}
+
+void TCustomer::setAccountPtr(TAccount* accountPtr) {
+	this->accountPtr[0] = accountPtr;
+}
+
+int TCustomer::getSumOfTAccounts() {
+	return sumOfTAccounts;
+}
+
+void TCustomer::setSumOfTAccounts(int sumOfTAccounts) {
+	this->sumOfTAccounts = sumOfTAccounts;
+}
+
 void TCustomer::print() {
 	cout << name << endl;
 	cout << street << endl;
 	cout << postcode << " " << city << endl;
 	cout << "born on: ";
-	cout << birthday.print() << endl;
+	birthday.print();
+	cout << endl;
 	cout << "Accounts:" << endl;
+	for (int i = 0; i < 1; i++) {
+		cout << "-  Account number: ";
+		cout << accountPtr[0]->getAccountNr() << endl;
+	}
+
 }
 
 

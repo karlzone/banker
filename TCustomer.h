@@ -15,6 +15,7 @@
 
 using namespace std;
 
+#define MAXACCOUNTS 10
 
 class TAccount;
 
@@ -23,7 +24,7 @@ private:
 	string name, street, streetnr, postcode, city;
 	TDate birthday;
 	int sumOfTAccounts;
-	TAccount *accountPtr[];
+	TAccount *accountPtr[MAXACCOUNTS];
 	//TODO array of pointers on TAccount
 	
 public:
@@ -47,6 +48,7 @@ public:
 	void setAccountPtr(TAccount* accountPtr);
 	int getSumOfTAccounts();
 	void setSumOfTAccounts(int sumOfTAccounts);
+	void addAccount(TAccount * accountPtr);
 
 	void print();
 };

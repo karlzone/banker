@@ -36,6 +36,7 @@ public:
 	void setSumOfBookings(int sumOfBookings);
 	void print();
 	void printAccountNr();
+
 };
 
 #endif /* TACCOUNT_H_ */

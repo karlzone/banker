@@ -7,7 +7,7 @@
 #include <iostream>
 #include <string.h>
 
-//#include "TCustomer.h"
+#include "TCustomer.h"
 #include "TAccount.h"
 
 using namespace std;
@@ -21,6 +21,7 @@ TAccount::~TAccount() {
 }
 
 TAccount::TAccount(TCustomer *customerPtr, string accountNr, string pin) {
+	customerPtr->addAccount(this);
 	this->customerPtr = customerPtr;
 	this->accountNr = accountNr;
 	this->pin = pin;

@@ -26,12 +26,12 @@ TAccount Konto1(&Kunde1, "1234567890", "9999");
 
 cout << "Betrag 1: " << endl; Betrag1.print();cout << endl << endl;
 cout << "Kunde 1: " << endl; Kunde1.print(); cout << endl << endl;
-//cout << "Konto 1; " << endl; Konto1.print(); cout << endl << endl;
+cout << "Konto 1; " << endl; Konto1.print(); cout << endl << endl;
 
-//TAccount Konto2(&Kunde1, "9876543210", "0101");
+TAccount Konto2(&Kunde1, "9876543210", "0101");
 
-//cout << "Kunde 1: " << endl; Kunde1.print(); cout << endl << endl;
-//cout << "Konto 2; " << endl; Konto2.print(); cout << endl << endl;
+cout << "Kunde 1: " << endl; Kunde1.print(); cout << endl << endl;
+cout << "Konto 2; " << endl; Konto2.print(); cout << endl << endl;
 
 cout << endl << endl << endl;
 cout << "...press return key to close the program..." << endl;

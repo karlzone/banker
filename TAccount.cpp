@@ -4,10 +4,7 @@
  *  Created on: 28 Oct 2012
  *      Author: karsten
  */
-#include <iostream>
-#include <string.h>
 
-#include "TCustomer.h"
 #include "TAccount.h"
 
 using namespace std;
@@ -20,8 +17,10 @@ TAccount::~TAccount() {
 	// TODO Auto-generated destructor stub
 }
 
-TAccount::TAccount(TCustomer *customerPtr, string accountNr, string pin) {
+TAccount::TAccount(TBank *bankPtr, TCustomer *customerPtr, string accountNr, string pin) {
 	customerPtr->addAccount(this);
+	bankPtr->addAccount(this);
+	this->bankPtr = bankPtr;
 	this->customerPtr = customerPtr;
 	this->accountNr = accountNr;
 	this->pin = pin;
@@ -33,18 +32,18 @@ TAccount::TAccount(TCustomer *customerPtr, string accountNr, string pin) {
 string TAccount::getAccountNr() {
 	return accountNr;
 }
-
+/*
 void TAccount::setAccountNr(string accountNr) {
 	this->accountNr = accountNr;
-}
+}*/
 
 TCustomer* TAccount::getCustomerPtr() {
 	return customerPtr;
 }
-
+/*
 void TAccount::setCustomerPtr(TCustomer* customerPtr) {
 	this->customerPtr = customerPtr;
-}
+}*/
 
 string TAccount::getPin() {
 	return pin;
@@ -66,9 +65,4 @@ void TAccount::print() {
 	cout << "Account number:  " << accountNr << endl;
 	cout << "Bookings:        " << sumOfBookings << endl;
 	cout << "Balance:         " << "0.00 EUR" << endl;
-}
-
-void TAccount::printAccountNr() {
-	cout << accountNr;
-	cout.flush();
 }

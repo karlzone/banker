@@ -34,20 +34,28 @@ public:
 
 	TDate getBirthday();
 	void setBirthday(TDate birthday);
+
 	string getCity();
 	void setCity(string city);
+
 	string getName();
 	void setName(string name);
+
 	string getPostcode();
 	void setPostcode(string postcode);
+
 	string getStreet();
 	void setStreet(string street);
+
 	string getStreetnr();
 	void setStreetnr(string streetnr);
+
 	TAccount* getAccountPtr();
-	void setAccountPtr(TAccount* accountPtr);
+//	void setAccountPtr(TAccount* accountPtr);
+
 	int getSumOfTAccounts();
-	void setSumOfTAccounts(int sumOfTAccounts);
+//	void setSumOfTAccounts(int sumOfTAccounts);
+
 	void addAccount(TAccount * accountPtr);
 
 	void print();

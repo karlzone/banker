@@ -30,7 +30,7 @@ TCustomer::TCustomer(string name, TDate birthday, string street, string streetnr
 	this->city = city;
 	this->birthday = birthday;
 	this->sumOfTAccounts = 0;
-	accountPtr[0] = getAccountPtr();
+//	accountPtr[0] = getAccountPtr();
 }
 
 TDate TCustomer::getBirthday() {
@@ -84,18 +84,18 @@ void TCustomer::setStreetnr(string streetnr) {
 TAccount* TCustomer::getAccountPtr(){
 	return accountPtr[0];
 }
-
+/*
 void TCustomer::setAccountPtr(TAccount* accountPtr) {
 	this->accountPtr[0] = accountPtr;
-}
+}*/
 
 int TCustomer::getSumOfTAccounts() {
 	return sumOfTAccounts;
 }
-
+/*
 void TCustomer::setSumOfTAccounts(int sumOfTAccounts) {
 	this->sumOfTAccounts = sumOfTAccounts;
-}
+}*/
 
 void TCustomer::print() {
 	cout << name << endl;

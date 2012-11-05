@@ -62,6 +62,7 @@ void TAccount::setSumOfBookings(int sumOfBookings) {
 }
 
 void TAccount::print() {
+	customerPtr->print();
 	cout << "Account number:  " << accountNr << endl;
 	cout << "Bookings:        " << sumOfBookings << endl;
 	cout << "Balance:         " << "0.00 EUR" << endl;

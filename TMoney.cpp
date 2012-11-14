@@ -44,14 +44,14 @@ string TMoney::getCurrency() {
 }
 
 void TMoney::print() {
-	//long oldCout;
-	//long newCout = (ios::dec | ios::fixed);	//decimal and fixed
-	//oldCout = cout.flags();
-	//cout.flags(newCout);
+	ios::fmtflags oldCout;
+	ios::fmtflags newCout = (ios::dec | ios::fixed);	//decimal and fixed
+	oldCout = cout.flags();
+	cout.flags(newCout);
 
 	cout.precision(2);
 	cout << fixed << amount << currency;
 	cout.flush();
 
-	//cout.flags(oldCout);
+	cout.flags(oldCout);
 }

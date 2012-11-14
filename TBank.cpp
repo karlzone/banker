@@ -7,21 +7,21 @@
 
 #include "TBank.h"
 
+using namespace std;
 
-TBank::TBank(string Name, unsigned BLZ){
-	this->name;
-	this->BLZ;
+TAccount *TBank::accountList[MAXBANKACCOUNTS] = { false };
+
+TBank::TBank(string name, unsigned BLZ) {
+	this->name = name;
+	this->BLZ = BLZ;
+	accountCounter = 0;
 }
 
-void TBank::setAccountCounter(int accountCounter) {
-	this->accountCounter = accountCounter;
+void TBank::addAccount(TAccount* account) {
+	accountList[accountCounter++] = account;
 }
 
-static const TAccount**& TBank::getAccountList() const {
-	return accountList;
-}
-
-unsigned TBank::getBlz() const {
+unsigned TBank::getBlz() {
 	return BLZ;
 }
 
@@ -29,17 +29,33 @@ void TBank::setBlz(unsigned blz) {
 	BLZ = blz;
 }
 
-const string& TBank::getName() const {
+string TBank::getName() {
 	return name;
 }
 
-void TBank::setName(const string& name) {
+int TBank::getAccountCounter() {
+	return accountCounter;
+}
+
+void TBank::setName(string name) {
 	this->name = name;
 }
 
-void print(){
+void TBank::print() {
+	cout << name << endl;
+	cout << BLZ << endl;
+	cout << "Anzahl Konten: " << accountCounter << endl;
+	cout << "Kontenliste:" << endl;
+	cout << "Kontonr. | Kundenname | Anz. Buchungen | Kontostand" << endl;
+	for (int i = 0; i < accountCounter; i++) {
+		cout << accountList[i]->getAccountNr() << '|';
+		cout << accountList[i]->getCustomerPtr()->getName() << '|';
+		cout << accountList[i]->getSumOfBookings() << '|';
+		cout << "Kontostand";
+		cout << endl;
+	}
 
 }
-TBank::~TBank(){
+TBank::~TBank() {
 
 }

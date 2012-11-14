@@ -14,15 +14,16 @@
 using namespace std;
 
 /*TCustomer::TCustomer() {
-	// TODO Auto-generated constructor stub
+ // TODO Auto-generated constructor stub
 
-}*/
+ }*/
 
 TCustomer::~TCustomer() {
 	// TODO Auto-generated destructor stub
 }
 
-TCustomer::TCustomer(string name, TDate birthday, string street, string streetnr,string postcode, string city) {
+TCustomer::TCustomer(string name, TDate birthday, string street,
+		string streetnr, string postcode, string city) {
 	this->name = name;
 	this->street = street;
 	this->streetnr = streetnr;
@@ -30,7 +31,7 @@ TCustomer::TCustomer(string name, TDate birthday, string street, string streetnr
 	this->city = city;
 	this->birthday = birthday;
 	this->sumOfTAccounts = 0;
-	accountPtr[0] = getAccountPtr();
+//	accountPtr[0] = getAccountPtr();
 }
 
 TDate TCustomer::getBirthday() {
@@ -41,7 +42,7 @@ void TCustomer::setBirthday(const TDate birthday) {
 	this->birthday = birthday;
 }
 
-string TCustomer::getCity(){
+string TCustomer::getCity() {
 	return city;
 }
 
@@ -81,21 +82,21 @@ void TCustomer::setStreetnr(string streetnr) {
 	this->streetnr = streetnr;
 }
 
-TAccount* TCustomer::getAccountPtr(){
+TAccount* TCustomer::getAccountPtr() {
 	return accountPtr[0];
 }
-
-void TCustomer::setAccountPtr(TAccount* accountPtr) {
-	this->accountPtr[0] = accountPtr;
-}
+/*
+ void TCustomer::setAccountPtr(TAccount* accountPtr) {
+ this->accountPtr[0] = accountPtr;
+ }*/
 
 int TCustomer::getSumOfTAccounts() {
 	return sumOfTAccounts;
 }
-
-void TCustomer::setSumOfTAccounts(int sumOfTAccounts) {
-	this->sumOfTAccounts = sumOfTAccounts;
-}
+/*
+ void TCustomer::setSumOfTAccounts(int sumOfTAccounts) {
+ this->sumOfTAccounts = sumOfTAccounts;
+ }*/
 
 void TCustomer::print() {
 	cout << name << endl;
@@ -106,7 +107,7 @@ void TCustomer::print() {
 	cout << endl;
 	cout << "Accounts:" << endl;
 	for (int i = 0; i < sumOfTAccounts; i++) {
-		cout << "-  Account number:   " ;
+		cout << "-  Account number:   ";
 		//cout << i << endl;
 		cout << accountPtr[i]->getAccountNr() << endl;
 		//accountPtr[i] ->printAccountNr();
@@ -117,6 +118,4 @@ void TCustomer::print() {
 void TCustomer::addAccount(TAccount* accountPtr) {
 	this->accountPtr[sumOfTAccounts++] = accountPtr;
 }
-
-
 

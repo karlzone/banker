@@ -20,10 +20,10 @@ TTime::TTime() {
 	second = now->tm_sec;
 }
 
-TTime::TTime(int hour, int minute, int second){
-	this->hour=hour;
-	this->minute=minute;
-	this->second=second;
+TTime::TTime(int hour, int minute, int second) {
+	this->hour = hour;
+	this->minute = minute;
+	this->second = second;
 }
 
 int TTime::getHour() const {
@@ -53,7 +53,7 @@ void TTime::setSecond(int second) {
 	this->second = second;
 }
 
-void TTime::print(){
+void TTime::print() {
 	printf("%02d:%02d:%02d", hour, minute, second);
 }
 

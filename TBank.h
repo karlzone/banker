@@ -12,33 +12,23 @@
 
 #include "TAccount.h"
 
-using namespace std;
-
-#define MAXBANKACCOUNTS 100
-
 class TAccount;
-class TBank {
+class TBank
+{
 private:
 	string name;
 	unsigned BLZ;
-	static TAccount *accountList[MAXBANKACCOUNTS];
+	static TAccount *accountList[];
 	int accountCounter;
 public:
-
-	TBank(string, unsigned);
+	TBank(string,unsigned);
 	virtual ~TBank();
-
-	int getAccountCounter();
-
-	void addAccount(TAccount*);
-
-	unsigned getBlz();
+	void setAccountCounter(int accountCounter);
+	static const TAccount**& getAccountList() const;
+	unsigned getBlz() const;
 	void setBlz(unsigned blz);
-
-	string getName();
-	void setName(string name);
-
+	const string& getName() const;
+	void setName(const string& name);
 	void print();
-
 };
 #endif // !defined(EA_ABC9D122_9EC7_4555_A420_8FA79E39912F__INCLUDED_)

@@ -19,8 +19,9 @@ private:
 
 public:
 	TTime();
-	TTime(int, int, int);
+	TTime(int , int , int);
 	virtual ~TTime();
+
 
 	int getHour() const;
 	void setHour(int hour);

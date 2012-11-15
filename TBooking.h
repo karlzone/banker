@@ -8,19 +8,17 @@
 #ifndef TBOOKING_H_
 #define TBOOKING_H_
 
-#include <iostream>
 #include <string.h>
 
 #include "TDate.h"
 #include "TMoney.h"
 #include "TTime.h"
 
-using namespace std;
+namespace std {
 
 class TAccount;
 
 class TBooking {
-private:
 	TMoney amount;
 	TAccount* sourcePtr;
 	TAccount* destinPtr;
@@ -29,12 +27,13 @@ private:
 	string comment;
 	bool printed;
 
+
 public:
-	TBooking(TMoney, TAccount*, TAccount*, TDate, TTime, string);
+	TBooking();
 	virtual ~TBooking();
 	bool isPrinted() const;
 	void setPrinted(bool printed);
-	void print();
 };
 
+} /* namespace std */
 #endif /* TBOOKING_H_ */

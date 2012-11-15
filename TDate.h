@@ -16,8 +16,9 @@ private:
 
 public:
 	TDate();
-	TDate(int, int, int);
+	TDate(int , int , int);
 	virtual ~TDate();
+
 
 	void print();
 	int getDay() const;

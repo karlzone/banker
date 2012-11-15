@@ -13,16 +13,12 @@
 
 using namespace std;
 
-/*TCustomer::TCustomer() {
-	// TODO Auto-generated constructor stub
-
-}*/
-
 TCustomer::~TCustomer() {
 	// TODO Auto-generated destructor stub
 }
 
-TCustomer::TCustomer(string name, TDate birthday, string street, string streetnr,string postcode, string city) {
+TCustomer::TCustomer(string name, TDate birthday, string street,
+		string streetnr, string postcode, string city) {
 	this->name = name;
 	this->street = street;
 	this->streetnr = streetnr;
@@ -41,7 +37,7 @@ void TCustomer::setBirthday(const TDate birthday) {
 	this->birthday = birthday;
 }
 
-string TCustomer::getCity(){
+string TCustomer::getCity() {
 	return city;
 }
 
@@ -93,6 +89,7 @@ int TCustomer::getSumOfTAccounts() {
 	return sumOfTAccounts;
 }
 /*
+<<<<<<< HEAD
 void TCustomer::setSumOfTAccounts(int sumOfTAccounts) {
 	this->sumOfTAccounts = sumOfTAccounts;
 }*/
@@ -107,6 +104,7 @@ void TCustomer::print() {
 	cout << "Accounts:" << endl;
 	for (int i = 0; i < sumOfTAccounts; i++) {
 		cout << "-  Account number:   " ;
+		cout << "-  Account number:   ";
 		//cout << i << endl;
 		cout << accountPtr[i]->getAccountNr() << endl;
 		//accountPtr[i] ->printAccountNr();
@@ -117,6 +115,3 @@ void TCustomer::print() {
 void TCustomer::addAccount(TAccount* accountPtr) {
 	this->accountPtr[sumOfTAccounts++] = accountPtr;
 }
-
-
-

@@ -14,7 +14,6 @@
 #include "TBank.h"
 #include "TCustomer.h"
 
-
 using namespace std;
 
 class TBank;
@@ -22,7 +21,6 @@ class TCustomer;
 
 class TAccount {
 private:
-
 	TBank *bankPtr;
 	TCustomer *customerPtr;
 
@@ -31,11 +29,9 @@ private:
 
 	int sumOfBookings;
 
-
 public:
-	TAccount(TBank*, TCustomer *, string, string);
+	TAccount(TBank*, TCustomer*, string, string);
 	virtual ~TAccount();
-
 
 	string getAccountNr();
 	//void setAccountNr(string accountNr);
@@ -52,5 +48,4 @@ public:
 	void print();
 
 };
-
 #endif /* TACCOUNT_H_ */

@@ -1,10 +1,3 @@
-/*
- * TMoney.cpp
- *
- *  Created on: 18 Oct 2012
- *      Author: karsten
- */
-
 #include <iostream>
 #include <ios>
 

@@ -7,14 +7,16 @@
 
 #include "TBank.h"
 
+using namespace std;
+TAccount *TBank::accountList[MAXBANKACCOUNTS] = { false };
 
-TBank::TBank(string name, unsigned BLZ){
+TBank::TBank(string name, unsigned BLZ) {
 	this->name = name;
 	this->BLZ = BLZ;
 	accountCounter = 0;
 }
 
-void TBank::addAccount(TAccount* account){
+void TBank::addAccount(TAccount* account) {
 	accountList[accountCounter++] = account;
 }
 
@@ -38,7 +40,7 @@ void TBank::setName(string name) {
 	this->name = name;
 }
 
-void TBank::print(){
+void TBank::print() {
 	cout << name << endl;
 	cout << BLZ << endl;
 	cout << "Anzahl Konten: " << accountCounter << endl;
@@ -53,6 +55,6 @@ void TBank::print(){
 	}
 
 }
-TBank::~TBank(){
+TBank::~TBank() {
 
 }

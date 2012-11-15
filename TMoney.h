@@ -8,7 +8,6 @@
 #ifndef TMONEY_H_
 #define TMONEY_H_
 
-
 //#include <stdio.h>
 #include <string>
 

@@ -17,8 +17,7 @@ using namespace std;
 #define MAXBANKACCOUNTS 100
 
 class TAccount;
-class TBank
-{
+class TBank {
 private:
 	string name;
 	unsigned BLZ;

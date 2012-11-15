@@ -8,35 +8,44 @@
 #ifndef TACCOUNT_H_
 #define TACCOUNT_H_
 
-//#include "TCustomer.h"
+#include <iostream>
+#include <string.h>
+
+#include "TBank.h"
+#include "TCustomer.h"
 
 using namespace std;
 
+class TBank;
 class TCustomer;
 
 class TAccount {
 private:
+	TBank *bankPtr;
 	TCustomer *customerPtr;
+
 	string accountNr;
 	string pin;
+
 	int sumOfBookings;
 
 public:
-	TAccount(TCustomer *, string, string);
+	TAccount(TBank*, TCustomer*, string, string);
 	virtual ~TAccount();
 
-
 	string getAccountNr();
-	void setAccountNr(string accountNr);
+	//void setAccountNr(string accountNr);
+
 	TCustomer* getCustomerPtr();
-	void setCustomerPtr(TCustomer* customerPtr);
+	//void setCustomerPtr(TCustomer* customerPtr);
+
 	string getPin();
 	void setPin(string pin);
+
 	int getSumOfBookings();
 	void setSumOfBookings(int sumOfBookings);
+
 	void print();
-	void printAccountNr();
 
 };
-
 #endif /* TACCOUNT_H_ */
